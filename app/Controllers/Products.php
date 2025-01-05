@@ -11,6 +11,7 @@ class Products extends BaseController
    
     public function index()
     {
+        //new branch commit
        
        
         $model = new ProductModel();
