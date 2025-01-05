@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8080:80"  # Map port 8080 of the host to port 80 of the container
+    volumes:
+      - .:/var/www/html  # Mount the project files into the container
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
